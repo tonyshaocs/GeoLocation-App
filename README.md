@@ -8,4 +8,6 @@
 <li>No Front-end Framework was used, all CSS was made personally.</li>
 </ul>
 
+The marker loads correctly as long as the OpenLayers is outside an img directory with the marker inside.
+
 ![alt text](https://github.com/tonyshaocs/GeoLocation-App/blob/master/Example2.png)
