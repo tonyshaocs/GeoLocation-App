@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="./css/styles.css">
+ <meta charset="UTF-8">
+<title>
+GeoLocation Application
+</title>
+
+</head>
+
+
+<body >
+
+<div class = "header">GeoLocation App
+<div class = "searchFunction">
+<input id="cityName1" class="search" type="text" placeholder="Latitude">
+<input id="cityName2" class="search" type="text" placeholder="Longitude">
+<button class="submit" onclick=changeMap(document.getElementById('cityName1').value,document.getElementById('cityName2').value)>Set Location</button>
+</div>
+</div>
+
+<div class="topSection">
+<section id = "targetZone" class="dropBox">Drag and Drop a Text File with (Latitude, Longitude)!</section>
+<section class = "infoSec" id = "infoSec">
+	<div class = "textHead">Current Location</div>
+	<div class = "infoSub" id = "infoLat"></div>
+	<div class = "infoSub" id = "infoLon"></div>
+	<div class = "infoSub" id = "infoAdd"></div>
+</section>
+<section class = "textSec" id = "infoSec">
+	<div class = "textHead" id="textHead"></div>
+	<div class = "textSub" id = "textLat"></div>
+	<div class = "textSub" id = "textLon"></div>
+	<div class = "textSub" id = "textAdd"></div>
+</section>
+</div>
+
+<div class="result" id="result"></div>
+<br/>
+
+<p class="instr">
+Click to place the Marker and change the Current Position. Drag to move Map.
+</p>
+<div class="containMap">
+	<div class = "demoMap" id="demoMap"></div>
+</div>
+
+<script src="./scripts/OpenLayers.js"></script>
+<script src="./scripts/haversine.js"></script>
+<script src="./scripts/script.js"></script>
+
+</body>
+
+
+</html>
