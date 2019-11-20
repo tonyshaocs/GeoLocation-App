@@ -17,7 +17,7 @@ GeoLocation Application
 <div class = "searchFunction">
 <input id="cityName1" class="search" type="text" placeholder="Latitude">
 <input id="cityName2" class="search" type="text" placeholder="Longitude">
-<button class="submit" onclick=changeMap(document.getElementById('cityName1').value,document.getElementById('cityName2').value)>Set Location</button>
+<button class="submit" onclick=setLocation(document.getElementById('cityName1').value,document.getElementById('cityName2').value)>Set Location</button>
 </div>
 </div>
 
@@ -49,7 +49,9 @@ Click to place the Marker and change the Current Position. Drag to move Map.
 
 <script src="./scripts/OpenLayers.js"></script>
 <script src="./scripts/haversine.js"></script>
+<script src="./scripts/initializeMap.js"></script>
 <script src="./scripts/script.js"></script>
+<script src="./scripts/worker.js"></script>
 
 </body>
 

@@ -1,5 +1,5 @@
 # GeoLocation-App
-
+Only works on Chrome.
 <ul>
 <li>Able to Drag-and-Drop text files with Latitude/Longitude pairs to compare with current location.</li>
 <li>Current Location can be changed by dragging the map with the cursor.</li>
