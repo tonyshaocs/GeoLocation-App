@@ -4,74 +4,12 @@ body{
 	font-family:calibri;
 }
 
-.header{
-	width:100%;
+.topBar{
 	text-align:left;
 	color:white;
 	font-size:35px;
 	background-color:black;	
-	margin:0px 0px 20px 0px;
 	padding-bottom:10px;
-}
-
-.topSection{
-	height:200px;
-}
-
-.dropBox{
-	position:relative;
-	float:left;
-	height:175px;
-	width:25%;
-	margin-top:10px;
-	margin-left: 10px;
-	border:dashed;
-	border-width: 3px;
-	border-radius: 5px;
-	font-size:25px;
-	text-align:center;
-	background-color: #E8E8E8;
-}
-
-.infoSec, .textSec{
-	position:relative;
-	float:left;
-	margin-top:10px;
-	font-size:24px;
-	margin-left:10px;
-	border:solid;
-	width:35%;
-	height:175px;
-	border-width:1px;
-	border-radius: 5px;
-}
-
-.result{
-	font-size:25px;
-	text-align:center;
-}
-
-.instr{
-	text-align:center;
-	font-size:18px;
-}
-
-.containMap {
-	margin-bottom:50px;
-	display: flex;
-	justify-content: center;
-}
-
-.demoMap{
-	width:90%;
-	height:750px;
-	border:solid;
-	border-radius: 10px;
-}
-
-.textHead{
-	text-align:center;
-	font-size:32px;
 }
 
 .searchFunction{
@@ -84,50 +22,96 @@ body{
 	width:150px;
 }
 
-
-@media(max-width:1000px){
-	
-.dropBox{
-	font-size:20px;
-	width:99%;
-	margin-left:1px;
-}
-
-.infoSec,.textSec{
-	font-size:20px;
-	width:48%;
-}
-	
 .topSection{
-	margin-bottom:150px;
-}	
-
-.search{
-	width:100px;
-}
+	height:200px;
+	text-align:center;
 }
 
-@media(max-width:700px){
-	
 .dropBox{
-	font-size:20px;
-	width:98%;
-	margin-left:0px;
+	height:177px;
+	width:25%;
+	border-radius:5px;
+	font-size:25px;
+	text-align:center;
+	background-color: #E8E8E8;
+	display:inline-block;
+	margin-top:15px;
 }
 
-.infoSec,.textSec{
-	font-size:20px;
-	width:99%;
-	margin-left:0px;
-}
-	
-.topSection{
-	margin-bottom:150px;
-}	
-
-.searchFunction{
-	width:100%;
+.infoSec, .textSec{
 	float:left;
-	background-color:#8FD8D8;
+	font-size:24px;
+	margin-left:10px;
+	border:solid;
+	width:35%;
+	height:175px;
+	border-width:1px;
+	border-radius:5px;
+	margin-top:15px;
 }
+
+.textHead{
+	text-align:center;
+	font-size:32px;
+	margin-bottom:10px;
+}
+
+.result{
+	font-size:25px;
+	text-align:center;
+}
+
+.instruction{
+	text-align:center;
+	margin-top:20px;
+}
+
+.containMap {
+	margin: 10px 0px 50px 0px;
+	display: flex;
+	justify-content: center;
+}
+
+.demoMap{
+	width:90%;
+	height:750px;
+	border:solid;
+	border-radius: 10px;
+}
+
+
+@media(max-width: 1000px){	
+	.dropBox{
+		font-size:20px;
+		width:98%;
+	}
+
+	.infoSec,.textSec{
+		font-size:20px;
+		width:48%;
+		margin-left:10px;
+	}
+		
+	.topSection{
+		margin-bottom:150px;
+	}	
+
+	.search{
+		width:100px;
+	}
+}
+
+@media(max-width: 700px){	
+
+	.infoSec,.textSec{
+		width:98%;
+		margin-left:0px;
+	}
+
+	.searchFunction{
+		width:100%;
+		float:left;
+		background-color:#8FD8D8;
+		margin-left:0px;
+	}
 }
