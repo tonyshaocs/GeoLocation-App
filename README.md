@@ -18,4 +18,10 @@
 
 The marker loads correctly as long as the OpenLayers is outside an img directory with the marker inside.
 
-![alt text](https://github.com/tonyshaocs/GeoLocation-App/blob/master/Example2.png)
+<h5>Without Comparing Distance:</h5>
+
+![alt text](https://github.com/tonyshaocs/GeoLocation-App/blob/master/examples/ex_1.png)
+
+<h5>With Comparing Distance:</h5>
+
+![alt text](https://github.com/tonyshaocs/GeoLocation-App/blob/master/examples/ex_2.png)
