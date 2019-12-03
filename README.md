@@ -1,5 +1,4 @@
 # GeoLocation-App
-Only works on Chrome.
 
 <h4>Details:</h4>
 <ul>
