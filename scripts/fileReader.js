@@ -1,26 +1,31 @@
-//Read the file.
+//Read the file and set the longitude & latitude on screen.
 function handleFileSelect(evt) {
 	evt.stopPropagation();
 	evt.preventDefault();
 	var files = evt.dataTransfer.files; 
 	var reader = new FileReader();  
 	reader.readAsText(files[0]);
-	reader.onload = function(event) {            
+	
+	reader.onload = function(event) {      
+		//Read the text file for a set of coordinates
 		document.getElementById('targetZone').value = event.target.reader;
-		var coorSet=(reader.result).replace(")","").replace("(","").split(",");
-		textLat=coorSet[0];
+		var coorSet=(reader.result).replace(")","").replace("(","").split(","); 
 		textLon=coorSet[1];
-		changeMap(coorSet[0],coorSet[1]);
-		document.getElementById("textLon").innerHTML="TextFile Longitude: "+textLon.toString().substring(0,10);
-		document.getElementById("textLat").innerHTML="TextFile Latitude: "+textLat.toString().substring(0,10);
-		document.getElementById("textAdd").innerHTML = "";
+		textLat=coorSet[0];
+		//Update the map to the coordinates inside the text file.
+		updateMap(coorSet[0],coorSet[1]);
+		//Update the screen for the coordinates in the text file.
+		updateTextFileCoors(textLon, textLat);
 		document.getElementById("textHead").innerHTML = "Loaded Coors";
+		//Retrieve and update the address for the coordinates in the text file.
 		updateAddress2();
+		//Begin the worker to calculate the distance between the user's previous position and new position.
 		startWorker();
 	}        
 }
 
 
+//Handler for the drop and drop zone
 function dragoverHandler(evt) {
 	evt.stopPropagation();
 	evt.preventDefault();

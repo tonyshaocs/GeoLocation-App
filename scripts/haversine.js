@@ -1,26 +1,23 @@
-var curlat=2;
-var curlong=3;
-var textlat=2;
-var textlon=3;
-
 self.onmessage = function (e) {
-    curlat = e.data.curlat;
-    curlon = e.data.curlon;
-	textlat = e.data.textLat;
-    textlon = e.data.textLon;
-	doSomething();
+    var curLat = e.data.curLat;
+    var curLon = e.data.curLon;
+	var textLat = e.data.textLat;
+    var textLon = e.data.textLon;
+	doSomething(curLat, curLon, textLat, textLon);
 }
 
+//Converts degrees to radians.
 function radians(degrees) {
 	return degrees * Math.PI / 180;
 }
 
+//Calculates distance between two points of lat/lon using the Haversine formula.
 function doSomething(){
 	var R= 6371;
-	var sp1 = radians(curlat);
-	var sp2 = radians(textlat);
-	var dLat = radians(textlat - curlat);
-	var dLon = radians(textlon - curlon);
+	var sp1 = radians(curLat);
+	var sp2 = radians(textLat);
+	var dLat = radians(textLat - curLat);
+	var dLon = radians(textLon - curLon);
 	
 	var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
                 Math.cos(sp1) * Math.cos(sp2) * 
