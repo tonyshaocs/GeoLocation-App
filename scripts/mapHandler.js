@@ -47,8 +47,11 @@ function handleMapClick(evt){
 	updateMarker(position);
 	curLon=displayPos.lon;
 	curLat=displayPos.lat;
+	//Update the current coors shown on screen. 
 	updateCurrentCoors(curLon, curLat);
+	//Call the function to make a request to the API.
 	updateAddress1();
+	//Start the worker to calculate the distance between two points, if a second point has been added.
 	startWorker();
 }
 
@@ -57,7 +60,9 @@ function setLocation(lon, lat){
 	curLat=parseFloat(lon,10);
 	curLon=parseFloat(lat,10);
 	document.getElementById("infoAdd").innerHTML = "";
+	//Update the current coors shown on screen. 
 	updateCurrentCoors(curLon, curLat);
+	//Relocate the user's position on the map.
 	updateMap(lon, lat);
 }
 
@@ -69,7 +74,9 @@ function updateMap(lon, lat){
 		var position = new OpenLayers.LonLat(templon, templat).transform( fromProjection, toProjection);
 		updateMarker(position);
 		map.setCenter(position, zoom );	
+		//Call the function to make a request to the API.
 		updateAddress1();
+		//Start the worker to calculate the distance between two points, if a second point has been added.
 		startWorker();
 	}
 }

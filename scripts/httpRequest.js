@@ -1,3 +1,6 @@
+//Type = 1 for updating coordinates for the current position on the map.
+//Type = 2 for updating coordinates for a given set of coordinates inside a text file.
+
 //Update the address for the set of coordinates the marker is at.
 function updateAddress1(){
 	HTTPRequest(1);
@@ -36,7 +39,7 @@ function processXML(xml, type){
 		id = "textAdd";
 	}
 	
-	//Since not all addresses are given in the same kind of tag, this portion tries to get info from a tag and if it doesnt exist, then it is caught and retried with a different one.
+	//Since not all address tags are available everytime, this portion tries to get info from a tag and if it does not exist, then it is caught and retried with a different one.
 	var xmlDoc = xml.responseXML;
 	try{
 		document.getElementById(id).innerHTML = xmlDoc.getElementsByTagName("house_number")[0].textContent+" "+xmlDoc.getElementsByTagName("road")[0].textContent+", "+xmlDoc.getElementsByTagName("city")[0].textContent+", "+
